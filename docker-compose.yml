@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  nginx:
+    container_name: nginx #название контейнера
+    build: ./build/nginx #тут лежит докерфайл
+    volumes:
+      - ./log/nginx:/var/log/nginx:z #log файлы nginx.
+      - ./public:/var/www/html/public
+    ports:
+      - "8080:80"
+    links:
+      - php-fpm
+    restart:
+      always
+    networks:
+      - app-network
+    depends_on:
+      - php
+  php:
+    container_name: php-fpm
+    build: ./build/php-fpm #тут лежит докерфайл
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./public:/var/www/html/public
+      - ./src:/var/www/html/src
+      - ./config:/var/www/html/config      
+      - ./log/php:/var/log/php:z #log файлы php.
+    networks:
+      - app-network
+    depends_on:
+      - db
+  db:
+    container_name: mysql
+    build: ./build/mysql #тут лежит докерфайл
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: forum
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    command: --init-file /data/application/init.sql #дамп бд
+    volumes:
+      - ./create_forum_db.sql:/data/application/init.sql #файл дампа базы данных
+      - ./db:/var/lib/mysql:z
+      - ./log/mysql:/var/log/mysql:z #log файлы mysql.
+      - ./config/mysql/conf.d:/etc/mysql/conf.d:z #Конфигурация mysql.
+    networks:
+      - app-network
+    restart:
+      always
+
+networks:
+  app-network:
+    driver: bridge
