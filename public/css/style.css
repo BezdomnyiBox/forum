@@ -1,25 +1,62 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-    margin: 0;
-    padding: 0;
+/* style.css */
+
+/* Стили для header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Навигация (контейнер для кнопок) */
+header nav {
+    margin-top: 10px;
+}
+
+/* Стили для кнопок */
+header .btn {
+    display: inline-block;         /* Располагаем кнопки горизонтально */
+    color: white;                  /* Белый цвет текста */
+    text-decoration: none;         /* Убираем подчеркивание ссылок */
+    font-weight: bold;             /* Более толстый шрифт */
+    padding: 10px 20px;            /* Внутренние отступы для кнопки */
+    border: 2px solid transparent; /* Для плавного эффекта при наведении */
+    transition: 0.3s ease;         /* Плавный переход для hover */
+    background-color: #444;        /* Фон для кнопки */
+    border-radius: 5px;            /* Округляем углы */
+    margin: 0 10px;                /* Расстояние между кнопками */
+}
+
+/* Эффект при наведении на кнопку */
+header .btn:hover {
+    background-color: #555;        /* Изменение фона при наведении */
+    border: 2px solid white;       /* Добавляем белую рамку */
+    color: #ffcc00;                /* Изменение цвета текста */
+}
+
+/* Для адаптивного дизайна: центрирование кнопок на мобильных устройствах */
+@media (max-width: 768px) {
+    header nav {
+        text-align: center;
+    }
+
+    header .btn {
+        display: block;            /* Кнопки становятся вертикальными на мобильных устройствах */
+        margin: 10px auto;
+    }
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 h1 {
-    color: #444;
-    font-size: 24px;
-}
-
-ul {
-    list-style-type: none;
-}
-
-li {
-    margin-bottom: 10px;
-}
-
-a {
-    text-decoration: none;
-    color: blue;
+    color: #ff0000;
+    font-size: 2em;
 }

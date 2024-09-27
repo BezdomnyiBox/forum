@@ -1,4 +1,4 @@
-<?php include '../views/layouts/header.php'; ?>
+<?php include_once __DIR__ . '/../layouts/header.php'; ?>
 
 <h1>Регистрация</h1>
 
@@ -12,4 +12,4 @@
     <button type="submit">Зарегистрироваться</button>
 </form>
 
-<?php include '../views/layouts/footer.php'; ?>
+<?php include_once __DIR__ . '/../layouts/footer.php'; ?>

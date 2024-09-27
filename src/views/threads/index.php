@@ -1,4 +1,4 @@
-<?php include '../views/layouts/header.php'; ?>
+<?php include_once __DIR__ . '/../layouts/header.php'; ?>
 
 <h1>Темы в категории</h1>
 
@@ -14,4 +14,4 @@
 
 <a href="/thread_create.php?category_id=<?= $categoryId ?>">Создать новую тему</a>
 
-<?php include '../views/layouts/footer.php'; ?>
+<?php include_once __DIR__ . '/../layouts/footer.php'; ?>

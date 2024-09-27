@@ -1,0 +1,88 @@
+2024/09/26 13:58:05 [notice] 1#1: using the "epoll" event method
+2024/09/26 13:58:05 [notice] 1#1: nginx/1.27.1
+2024/09/26 13:58:05 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2024/09/26 13:58:05 [notice] 1#1: OS: Linux 5.15.146.1-microsoft-standard-WSL2
+2024/09/26 13:58:05 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2024/09/26 13:58:05 [notice] 1#1: start worker processes
+2024/09/26 13:58:05 [notice] 1#1: start worker process 29
+2024/09/26 13:58:05 [notice] 1#1: start worker process 30
+2024/09/26 13:58:05 [notice] 1#1: start worker process 31
+2024/09/26 13:58:05 [notice] 1#1: start worker process 32
+2024/09/26 13:58:05 [notice] 1#1: start worker process 33
+2024/09/26 13:58:05 [notice] 1#1: start worker process 34
+2024/09/26 13:58:05 [notice] 1#1: start worker process 35
+2024/09/26 13:58:05 [notice] 1#1: start worker process 36
+2024/09/26 13:58:05 [notice] 1#1: start worker process 37
+2024/09/26 13:58:05 [notice] 1#1: start worker process 38
+2024/09/26 13:58:05 [notice] 1#1: start worker process 39
+2024/09/26 13:58:05 [notice] 1#1: start worker process 40
+2024/09/26 13:58:33 [error] 29#29: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2024/09/26 13:59:00 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2024/09/26 13:59:00 [notice] 29#29: gracefully shutting down
+2024/09/26 13:59:00 [notice] 40#40: gracefully shutting down
+2024/09/26 13:59:00 [notice] 30#30: gracefully shutting down
+2024/09/26 13:59:00 [notice] 31#31: gracefully shutting down
+2024/09/26 13:59:00 [notice] 32#32: gracefully shutting down
+2024/09/26 13:59:00 [notice] 33#33: gracefully shutting down
+2024/09/26 13:59:00 [notice] 34#34: gracefully shutting down
+2024/09/26 13:59:00 [notice] 35#35: gracefully shutting down
+2024/09/26 13:59:00 [notice] 37#37: gracefully shutting down
+2024/09/26 13:59:00 [notice] 38#38: gracefully shutting down
+2024/09/26 13:59:00 [notice] 39#39: gracefully shutting down
+2024/09/26 13:59:00 [notice] 39#39: exiting
+2024/09/26 13:59:00 [notice] 36#36: gracefully shutting down
+2024/09/26 13:59:00 [notice] 29#29: exiting
+2024/09/26 13:59:00 [notice] 40#40: exiting
+2024/09/26 13:59:00 [notice] 31#31: exiting
+2024/09/26 13:59:00 [notice] 32#32: exiting
+2024/09/26 13:59:00 [notice] 33#33: exiting
+2024/09/26 13:59:00 [notice] 34#34: exiting
+2024/09/26 13:59:00 [notice] 35#35: exiting
+2024/09/26 13:59:00 [notice] 37#37: exiting
+2024/09/26 13:59:00 [notice] 38#38: exiting
+2024/09/26 13:59:00 [notice] 39#39: exit
+2024/09/26 13:59:00 [notice] 36#36: exiting
+2024/09/26 13:59:00 [notice] 29#29: exit
+2024/09/26 13:59:00 [notice] 40#40: exit
+2024/09/26 13:59:00 [notice] 31#31: exit
+2024/09/26 13:59:00 [notice] 32#32: exit
+2024/09/26 13:59:00 [notice] 33#33: exit
+2024/09/26 13:59:00 [notice] 34#34: exit
+2024/09/26 13:59:00 [notice] 35#35: exit
+2024/09/26 13:59:00 [notice] 37#37: exit
+2024/09/26 13:59:00 [notice] 38#38: exit
+2024/09/26 13:59:00 [notice] 36#36: exit
+2024/09/26 13:59:01 [notice] 1#1: signal 17 (SIGCHLD) received from 39
+2024/09/26 13:59:01 [notice] 1#1: worker process 32 exited with code 0
+2024/09/26 13:59:01 [notice] 1#1: worker process 35 exited with code 0
+2024/09/26 13:59:01 [notice] 1#1: worker process 36 exited with code 0
+2024/09/26 13:59:01 [notice] 1#1: worker process 37 exited with code 0
+2024/09/26 13:59:01 [notice] 1#1: worker process 39 exited with code 0
+2024/09/26 13:59:01 [notice] 1#1: signal 29 (SIGIO) received
+2024/09/26 13:59:01 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2024/09/26 13:59:01 [notice] 1#1: signal 17 (SIGCHLD) received from 40
+2024/09/26 13:59:01 [notice] 1#1: worker process 31 exited with code 0
+2024/09/26 13:59:01 [notice] 1#1: worker process 40 exited with code 0
+2024/09/26 13:59:01 [notice] 1#1: signal 29 (SIGIO) received
+2024/09/26 13:59:01 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2024/09/26 13:59:01 [notice] 1#1: worker process 29 exited with code 0
+2024/09/26 13:59:01 [notice] 1#1: worker process 33 exited with code 0
+2024/09/26 13:59:01 [notice] 1#1: worker process 34 exited with code 0
+2024/09/26 13:59:01 [notice] 1#1: signal 29 (SIGIO) received
+2024/09/26 13:59:01 [notice] 1#1: signal 17 (SIGCHLD) received from 38
+2024/09/26 13:59:01 [notice] 1#1: worker process 38 exited with code 0
+2024/09/26 13:59:01 [notice] 1#1: signal 29 (SIGIO) received
+2024/09/26 18:56:27 [error] 29#29: *2 open() "/var/www/html/public/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: forum, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/index.php"
+2024/09/26 19:14:01 [error] 33#33: *1 directory index of "/var/www/html/public/" is forbidden, client: 172.18.0.1, server: forum, request: "GET / HTTP/1.1", host: "localhost"
+2024/09/27 09:20:38 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/sites-enabled/forum.conf:21
+2024/09/27 09:20:43 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/sites-enabled/forum.conf:21
+2024/09/27 09:20:47 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/sites-enabled/forum.conf:21
+2024/09/27 09:20:56 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/sites-enabled/forum.conf:21
+2024/09/27 09:21:01 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/sites-enabled/forum.conf:21
+2024/09/27 09:21:07 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/sites-enabled/forum.conf:21
+2024/09/27 09:21:14 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/sites-enabled/forum.conf:21
+2024/09/27 09:21:25 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/sites-enabled/forum.conf:21
+2024/09/27 09:21:54 [error] 22#22: *1 open() "/var/www/html/public/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: forum, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2024/09/27 09:55:41 [error] 31#31: *12 open() "/var/www/html/public/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: forum, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2024/09/27 09:55:49 [error] 33#33: *21 open() "/var/www/html/public/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: forum, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1"
+2024/09/27 10:00:00 [error] 29#29: *86 "/var/www/html/public/phpmyadmin/index.php" is not found (2: No such file or directory), client: 172.18.0.1, server: forum, request: "GET /phpmyadmin/ HTTP/1.1", host: "localhost", referrer: "https://www.yandex.ru/clck/jsredir?from=yandex.ru;suggest;browser&text="

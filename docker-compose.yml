@@ -1,36 +1,42 @@
 version: '3.8'
 
 services:
+  # Nginx контейнер
   nginx:
     container_name: nginx #название контейнера
     build: ./build/nginx #тут лежит докерфайл
     volumes:
       - ./log/nginx:/var/log/nginx:z #log файлы nginx.
-      - ./public:/var/www/html/public
+      - ./public:/var/www/html/public     # Монтируем папку public
+      - ./config/nginx/nginx.conf:/etc/nginx/nginx.conf #Конфигурация nginx.
+      - ./config/nginx/sites-enabled:/etc/nginx/sites-enabled #Конфигурация моего веб сервера.
     ports:
-      - "8080:80"
-    links:
-      - php-fpm
+      - "80:80"
+      - "443:443"
     restart:
       always
     networks:
       - app-network
     depends_on:
       - php
+
+  # PHP-FPM контейнер
   php:
     container_name: php-fpm
     build: ./build/php-fpm #тут лежит докерфайл
     ports:
       - "9000:9000"
     volumes:
-      - ./public:/var/www/html/public
-      - ./src:/var/www/html/src
-      - ./config:/var/www/html/config      
-      - ./log/php:/var/log/php:z #log файлы php.
+      - ./public:/var/www/html/public     # Монтируем папку public
+      - ./src:/var/www/html/src           # Монтируем папку src
+      - ./config/db.php:/var/www/html/config/db.php  # Монтируем конфигурацию БД
+
     networks:
       - app-network
     depends_on:
       - db
+
+  # MySQL контейнер
   db:
     container_name: mysql
     build: ./build/mysql #тут лежит докерфайл
@@ -44,9 +50,9 @@ services:
     command: --init-file /data/application/init.sql #дамп бд
     volumes:
       - ./create_forum_db.sql:/data/application/init.sql #файл дампа базы данных
-      - ./db:/var/lib/mysql:z
-      - ./log/mysql:/var/log/mysql:z #log файлы mysql.
-      - ./config/mysql/conf.d:/etc/mysql/conf.d:z #Конфигурация mysql.
+      - ./db:/var/lib/mysql
+      - ./log/mysql:/var/log/mysql #log файлы mysql.
+      - ./config/mysql/conf.d:/etc/mysql/conf.d #Конфигурация mysql.
     networks:
       - app-network
     restart:

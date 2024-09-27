@@ -1,4 +1,4 @@
-<?php include '../views/layouts/header.php'; ?>
+<?php include_once __DIR__ . '/../layouts/header.php'; ?>
 
 <h1>Категории форума</h1>
 
@@ -13,6 +13,6 @@
     <?php endforeach; ?>
 </ul>
 
-<a href="/category_create.php">Создать новую категорию</a>
+<a href="/create.php">Создать новую категорию</a>
 
-<?php include '../views/layouts/footer.php'; ?>
+<?php include_once __DIR__ . '/../layouts/footer.php'; ?>

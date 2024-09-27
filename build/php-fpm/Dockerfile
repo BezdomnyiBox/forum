@@ -17,11 +17,6 @@ RUN apt-get update && apt-get install -y \
 # Устанавливаем рабочую директорию
 WORKDIR /var/www/html
 
-# Копируем исходные файлы в контейнер (папку public и src)
-COPY ./public /var/www/html/public
-COPY ./src /var/www/html/src
-COPY ./config /var/www/html/config
-
 # Экспонируем порт для PHP-FPM
 EXPOSE 9000
 

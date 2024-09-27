@@ -1,4 +1,4 @@
-<?php include '../views/layouts/header.php'; ?>
+<?php include_once __DIR__ . '/../layouts/header.php'; ?>
 
 <h1>Добавить новый пост</h1>
 
@@ -9,4 +9,4 @@
     <button type="submit">Отправить</button>
 </form>
 
-<?php include '../views/layouts/footer.php'; ?>
+<?php include_once __DIR__ . '/../layouts/footer.php'; ?>

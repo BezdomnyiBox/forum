@@ -1,6 +1,6 @@
 <?php
 
-require_once '../models/User.php';
+require_once __DIR__ . '/../models/User.php';
 
 class UserController {
 
@@ -13,7 +13,7 @@ class UserController {
             User::create($username, $password);  // Создаем нового пользователя
             header('Location: /login.php');  // Перенаправляем на страницу авторизации
         } else {
-            require_once '../views/users/register.php';  // Подключаем форму регистрации
+            require_once __DIR__ . '/../views/users/register.php';  // Подключаем форму регистрации
         }
     }
 
@@ -32,7 +32,7 @@ class UserController {
                 echo "Неверные учетные данные.";  // Если данные неверны, выводим сообщение
             }
         } else {
-            require_once '../views/users/login.php';  // Подключаем форму авторизации
+            require_once __DIR__ . '/../views/users/login.php';  // Подключаем форму авторизации
         }
     }
 
