@@ -5,7 +5,7 @@
 <ul>
     <?php foreach ($categories as $category): ?>
         <li>
-            <a href="/category.php?id=<?= $category['id'] ?>">
+            <a href="/category?id=<?= $category['id'] ?>">
                 <?= htmlspecialchars($category['name']) ?>
             </a>
             <p><?= htmlspecialchars($category['description']) ?></p>
@@ -13,6 +13,6 @@
     <?php endforeach; ?>
 </ul>
 
-<a href="/create.php">Создать новую категорию</a>
+<a href="/create-category" class="button">Создать новую категорию</a>
 
 <?php include_once __DIR__ . '/../layouts/footer.php'; ?>

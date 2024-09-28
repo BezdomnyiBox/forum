@@ -23,6 +23,18 @@ class CategoryController {
         }
     }
 
+    // Обработка и сохранение новой категории
+    public function store() {
+        if (!empty($_POST['name']) && !empty($_POST['description'])) {
+            $name = $_POST['name'];
+            $description = $_POST['description'];
+            Category::create($name, $description);
+            header('Location: /'); // Перенаправляем на главную страницу после создания категории
+        } else {
+            echo "Пожалуйста, заполните все поля.";
+        }
+    }
+
     // Метод для просмотра одной категории по ID
     public function show($id) {
         $category = Category::getById($id);  // Получаем категорию по ID

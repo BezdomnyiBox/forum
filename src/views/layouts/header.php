@@ -12,10 +12,10 @@
     <nav>     
         <a href="/index.php" class="btn">Главная</a>
         <?php if (isset($_SESSION['user_id'])): ?>
-            <a href="/logout.php" class="btn">Выход</a>
+            <a href="/logout" class="btn">Выход</a>
         <?php else: ?>
-            <a href="/login.php" class="btn">Вход</a>
-            <a href="/register.php" class="btn">Регистрация</a>
+            <a href="/login" class="btn">Вход</a>
+            <a href="/register" class="btn">Регистрация</a>
         <?php endif; ?>
     </nav>
 </header>

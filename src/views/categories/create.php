@@ -2,14 +2,14 @@
 
 <h1>Создать новую категорию</h1>
 
-<form method="POST" action="/category_create.php">
+<form action="/store-category" method="POST">
     <label for="name">Название категории:</label>
-    <input type="text" name="name" required>
+    <input type="text" name="name" id="name" required>
 
-    <label for="description">Описание категории:</label>
-    <textarea name="description"></textarea>
+    <label for="description">Описание:</label>
+    <textarea name="description" id="description" required></textarea>
 
-    <button type="submit">Создать</button>
+    <button type="submit">Создать категорию</button>
 </form>
 
 <?php include_once __DIR__ . '/../layouts/footer.php'; ?>

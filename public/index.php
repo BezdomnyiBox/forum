@@ -18,23 +18,30 @@ if ($uri === '/' || $uri === '/index.php') {
     // Главная страница — список категорий
     $controller = new CategoryController();
     $controller->index();
-} elseif ($uri === '/category.php' && isset($_GET['id'])) {
+} elseif ($uri === '/category' && isset($_GET['id'])) {
     // Страница конкретной категории — список тем
     $controller = new ThreadController();
     $controller->index($_GET['id']);
-} elseif ($uri === '/thread.php' && isset($_GET['id'])) {
+} elseif ($uri === '/create-category') {
+    // Страница конкретной категории — список тем
+    $controller = new CategoryController();
+    $controller->create();
+} elseif ($uri === '/store-category' && $_SERVER['REQUEST_METHOD'] === 'POST') {
+    $controller = new CategoryController();
+    $controller->store();
+} elseif ($uri === '/thread' && isset($_GET['id'])) {
     // Страница конкретной темы — список постов
     $controller = new PostController();
     $controller->index($_GET['id']);
-} elseif ($uri === '/register.php') {
+} elseif ($uri === '/register') {
     // Страница регистрации
     $controller = new UserController();
     $controller->register();
-} elseif ($uri === '/login.php') {
+} elseif ($uri === '/login') {
     // Страница входа в систему
     $controller = new UserController();
     $controller->login();
-} elseif ($uri === '/logout.php') {
+} elseif ($uri === '/logout') {
     // Страница выхода из системы
     $controller = new UserController();
     $controller->logout();
