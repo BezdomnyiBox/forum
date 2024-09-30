@@ -13,7 +13,7 @@
 
 1. Клонирование репозитория
    
-```https://github.com/BezdomnyiBox/forum```
+```https://github.com/BezdomnyiBox/forum.git```
 
 2. Переход в директорию
 
