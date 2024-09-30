@@ -2,7 +2,7 @@
 
 <h1>Создать новую категорию</h1>
 
-<form action="/store-category" method="POST">
+<form action="/category/create" method="POST">
     <label for="name">Название категории:</label>
     <input type="text" name="name" id="name" required>
 

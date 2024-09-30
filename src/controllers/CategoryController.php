@@ -13,25 +13,17 @@ class CategoryController {
     // Метод для создания новой категории
     public function create() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $name = $_POST['name'];
-            $description = $_POST['description'];
+            if (!empty($_POST['name']) && !empty($_POST['description'])) {
+                $name = $_POST['name'];
+                $description = $_POST['description'];
+                Category::create($name, $description);
+                header('Location: /category'); // Перенаправляем на страницу с категориями после создания категории
+            } else {
+                echo "Пожалуйста, заполните все поля.";
+            }
 
-            Category::create($name, $description);  // Создаем новую категорию
-            header('Location: /categories.php');  // Перенаправляем на список категорий
         } else {
             require_once __DIR__ . '/../views/categories/create.php';  // Подключаем форму создания категории
-        }
-    }
-
-    // Обработка и сохранение новой категории
-    public function store() {
-        if (!empty($_POST['name']) && !empty($_POST['description'])) {
-            $name = $_POST['name'];
-            $description = $_POST['description'];
-            Category::create($name, $description);
-            header('Location: /'); // Перенаправляем на главную страницу после создания категории
-        } else {
-            echo "Пожалуйста, заполните все поля.";
         }
     }
 

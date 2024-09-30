@@ -1,6 +1,6 @@
 <?php include_once __DIR__ . '/../layouts/header.php'; ?>
 
-<h1>Посты в теме</h1>
+<h1>Посты в теме: <?php echo htmlspecialchars($thread['title']); ?></h1>
 
 <ul>
     <?php foreach ($posts as $post): ?>
@@ -11,9 +11,6 @@
     <?php endforeach; ?>
 </ul>
 
-<form method="POST" action="/post_create.php?thread_id=<?= $threadId ?>">
-    <textarea name="content" required></textarea>
-    <button type="submit">Добавить пост</button>
-</form>
+<a href="/category/<?= $categoryId ?>/thread/<?= $threadId ?>/create-post">Создать новый пост</a>
 
 <?php include_once __DIR__ . '/../layouts/footer.php'; ?>

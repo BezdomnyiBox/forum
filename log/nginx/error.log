@@ -86,3 +86,16 @@
 2024/09/27 09:55:41 [error] 31#31: *12 open() "/var/www/html/public/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: forum, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
 2024/09/27 09:55:49 [error] 33#33: *21 open() "/var/www/html/public/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: forum, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1"
 2024/09/27 10:00:00 [error] 29#29: *86 "/var/www/html/public/phpmyadmin/index.php" is not found (2: No such file or directory), client: 172.18.0.1, server: forum, request: "GET /phpmyadmin/ HTTP/1.1", host: "localhost", referrer: "https://www.yandex.ru/clck/jsredir?from=yandex.ru;suggest;browser&text="
+2024/09/28 16:15:58 [error] 25#25: *20 open() "/var/www/html/public/favicon.ico" failed (2: No such file or directory), client: 172.24.0.1, server: forum, request: "GET /favicon.ico HTTP/1.1", host: "localhost"
+2024/09/28 19:36:45 [error] 27#27: *21 open() "/var/www/html/public/favicon.ico" failed (2: No such file or directory), client: 172.24.0.1, server: forum, request: "GET /favicon.ico HTTP/1.1", host: "localhost"
+2024/09/30 10:17:20 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/sites-enabled/forum.conf:25
+2024/09/30 10:17:24 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/sites-enabled/forum.conf:25
+2024/09/30 10:17:29 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/sites-enabled/forum.conf:25
+2024/09/30 10:17:33 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/sites-enabled/forum.conf:25
+2024/09/30 10:17:38 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/sites-enabled/forum.conf:25
+2024/09/30 10:17:44 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/sites-enabled/forum.conf:25
+2024/09/30 10:17:52 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/sites-enabled/forum.conf:25
+2024/09/30 10:18:06 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/sites-enabled/forum.conf:25
+2024/09/30 10:18:23 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/sites-enabled/forum.conf:25
+2024/09/30 10:18:53 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/sites-enabled/forum.conf:25
+2024/09/30 10:19:09 [error] 23#23: *1 open() "/var/www/html/public/favicon.ico" failed (2: No such file or directory), client: 172.24.0.1, server: forum, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/index.php"

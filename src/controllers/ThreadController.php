@@ -1,23 +1,42 @@
 <?php
 
 require_once __DIR__ . '/../models/Thread.php';
+require_once __DIR__ . '/../models/Category.php';
 
 class ThreadController {
 
     // Метод для отображения всех тем в категории
     public function index($categoryId) {
-        $threads = Thread::getByCategory($categoryId);  // Получаем темы по ID категории
-        require_once __DIR__ . '/../views/threads/index.php';  // Подключаем вид для отображения списка тем
+        $category = Category::getById($categoryId);
+        if ($category) {
+            $threads = Thread::getByCategory($categoryId);
+            require_once __DIR__ . '/../views/threads/index.php';  // Подключаем вид для отображения списка тем
+        } else {
+            http_response_code(404);
+            echo "404 - Категория не найдена";
+        }
     }
 
     // Метод для создания новой темы
     public function create($categoryId) {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $title = $_POST['title'];
-            $userId = $_SESSION['user_id'];
 
-            Thread::create($categoryId, $userId, $title);  // Создаем новую тему
-            header('Location: /category.php?id=' . $categoryId);  // Перенаправляем на список тем
+        // Получаем информацию о категории
+        $category = Category::getById($categoryId);
+        if (!$category) {
+            http_response_code(404);
+            echo "404 - Категория не найдена";
+            exit();
+        }
+        
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            if (!empty($_POST['title'])) {
+                $title = $_POST['title'];
+                $userId = $_SESSION['user_id']; // Предполагается, что пользователь авторизован
+                Thread::create($categoryId, $userId, $title);
+                header("Location: /category/$categoryId");
+            } else {
+                echo "Пожалуйста, заполните все поля.";
+            }
         } else {
             require_once __DIR__ . '/../views/threads/create.php';  // Подключаем форму создания темы
         }

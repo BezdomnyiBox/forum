@@ -1,8 +1,8 @@
 # Игнорируем директорию с данными MySQL
 db/
 
-# Игнорируем файлы логов и временные файлы
-log/
-*.log
-*.tmp
-*.bak
+# Игнорируем файлы логов
+/log
+
+log/nginx/access.log
+log/nginx/error.log

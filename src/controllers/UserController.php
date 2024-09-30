@@ -11,7 +11,7 @@ class UserController {
             $password = password_hash($_POST['password'], PASSWORD_BCRYPT);  // Хешируем пароль
 
             User::create($username, $password);  // Создаем нового пользователя
-            header('Location: /login.php');  // Перенаправляем на страницу авторизации
+            header('Location: /login');  // Перенаправляем на страницу авторизации
         } else {
             require_once __DIR__ . '/../views/users/register.php';  // Подключаем форму регистрации
         }
@@ -38,8 +38,9 @@ class UserController {
 
     // Метод для выхода из системы
     public function logout() {
-        session_start();
+        
+        //session_start();
         session_destroy();  // Удаляем сессию
-        header('Location: /login.php');  // Перенаправляем на страницу авторизации
+        header('Location: /login');  // Перенаправляем на страницу авторизации
     }
 }

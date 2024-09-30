@@ -2,7 +2,7 @@
 
 <h1>Вход</h1>
 
-<form method="POST" action="/login.php">
+<form method="POST" action="/login">
     <label for="username">Имя пользователя:</label>
     <input type="text" name="username" required>
 

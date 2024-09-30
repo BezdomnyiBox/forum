@@ -2,7 +2,7 @@
 
 <h1>Регистрация</h1>
 
-<form method="POST" action="/register.php">
+<form method="POST" action="/register">
     <label for="username">Имя пользователя:</label>
     <input type="text" name="username" required>
 
